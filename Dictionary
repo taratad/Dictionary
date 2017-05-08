@@ -1,0 +1,58 @@
+public class Dictionary {
+	
+	int letters;
+	String letter;
+	int place;
+	String letter2;
+	int place2;
+	String[] dictionary = new In("enable1.txt").readAllLines();
+	
+	public Dictionary(int ls, String l, int p, String l2, int p2){
+		letters = ls;
+		letter = l;
+		place = p;
+		letter2 = l2;
+		place2 = p2;
+	}
+	
+	public void findWord(){
+		for(int i = 0; i < dictionary.length; i++){
+			if(dictionary[i].length() == letters 
+					&& dictionary[i].substring(place -1, place).equals(letter)
+					&& dictionary[i].substring(place2 -1, place2).equals(letter2)){
+				System.out.println(dictionary[i]);
+			}
+	}
+		
+	}
+	public int getLetters() {
+		return letters;
+	}
+	public void setLetters(int letters) {
+		this.letters = letters;
+	}
+	public String getLetter() {
+		return letter;
+	}
+	public void setLetter(String letter) {
+		this.letter = letter;
+	}
+	public int getPlace() {
+		return place;
+	}
+	public void setPlace(int place) {
+		this.place = place;
+	}
+	public String getLetter2() {
+		return letter2;
+	}
+	public void setLetter2(String letter2) {
+		this.letter2 = letter2;
+	}
+	public int getPlace2() {
+		return place2;
+	}
+	public void setPlace2(int place2) {
+		this.place2 = place2;
+	}
+}
